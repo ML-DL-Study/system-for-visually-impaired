@@ -28,11 +28,12 @@
 
 ---
 ## 프로그램 설명
-### "시각장애인을 위한 도보환경 알림이"
+### "시각장애인을 위한 도보환경 알리미"
 1. 앞에 있는 횡단보도와 신호등을 **알아서** 찾아주고
 2. 신호등의 색깔까지 **알아서** 알려주고
 3. 횡단보도를 건너야 할 타이밍까지 **알아서** 알려주는  
-시각장애인의 안전한 도보 환경 구축을 위한 서비스입니다.
+시각장애인의 안전한 도보 환경 구축을 위한 서비스  
+
 ---
 ## 목적 및 필요성 
 <img src="https://user-images.githubusercontent.com/61938029/101280932-6c71e300-380f-11eb-9f6b-617ac933f7ee.png" height="240px"/> <img src="https://user-images.githubusercontent.com/61938029/101280935-70056a00-380f-11eb-86fb-46cfe8078322.png" height="240px"/> <img src="https://user-images.githubusercontent.com/61938029/101280940-75fb4b00-380f-11eb-8fb5-95f6df5f094f.png" height="240px"/>
@@ -101,12 +102,12 @@
 ---
 ## 알고리즘
 ### 신호등 색상 검출 알고리즘
-- **HSV**모델 사용.
-<img src="https://user-images.githubusercontent.com/61938029/101289435-bc689e00-383f-11eb-8c48-c7e587f6c47c.png" width="300px"/>
-<img src="https://user-images.githubusercontent.com/61938029/101289440-cbe7e700-383f-11eb-818a-69d8d80e0596.png" width="300px"/>
-<img src="https://user-images.githubusercontent.com/61938029/101289546-7eb84500-3840-11eb-90cd-38d2bd386cb5.png" width="300px"/>
+- HSV color 모델 사용  
 
-- H, S, V 이미지 중 밝기 값인 V 이미지 이용.
+<img src="https://user-images.githubusercontent.com/61938029/101289435-bc689e00-383f-11eb-8c48-c7e587f6c47c.png" width="400px" height="200px"/> <img src="https://user-images.githubusercontent.com/61938029/101289440-cbe7e700-383f-11eb-818a-69d8d80e0596.png" width="400px" height="200px"/>
+> HSV이미지, H, S, V 이미지 
+
+- 신호등이 검출되었을 때 **밝기(V) 이미지**가 신호등의 불빛을 뚜렷하게 나타냄
 
 - 검출된 신호등의 영역 ==> 위/아래 절반으로 나누어 픽셀 값 더함 ==> 이 크기로 나누어 어떤 영역에 밝기 값이 더 많은지 판단.
 
@@ -123,8 +124,15 @@
 
 ---
 ## 시연 영상
-<img src="https://user-images.githubusercontent.com/61938029/101289718-93e1a380-3841-11eb-81cc-546f7c786f71.png" width="500px"/>
-https://www.youtube.com/watch?v=AHQ358YE6tY  
-<img src="https://user-images.githubusercontent.com/61938029/101289753-c7243280-3841-11eb-9f81-f062c24020eb.png" width="500px"/>
-https://youtu.be/q3KLPQ416m8  
+#### 클릭하시면 유튜브로 연결됩니다!
+### 초기 초록불 인식된 경우
+<a href="https://www.youtube.com/watch?v=AHQ358YE6tY">
+  <img src="https://user-images.githubusercontent.com/61938029/101289718-93e1a380-3841-11eb-81cc-546f7c786f71.png" width="700px"/>
+</a>
+
+### 초기 빨간불 인식된 경우
+<a href="https://youtu.be/q3KLPQ416m8">
+  <img src="https://user-images.githubusercontent.com/61938029/101289753-c7243280-3841-11eb-9f81-f062c24020eb.png" width="700px"/>
+</a>
+
 
